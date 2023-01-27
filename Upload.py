@@ -30,6 +30,7 @@ for file in files:
     
     # Upload to the mailbox.
     success = imap.AppendMime("INBOX" ,sbMime.getAsString())
+    
     if (success != True):
         print(imap.lastErrorText())
         sys.exit()
